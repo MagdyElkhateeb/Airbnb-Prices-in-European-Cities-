@@ -138,14 +138,19 @@ The database is connected directly to Power BI from Microsoft SQL Server to deli
 
 ```
 .
-├── 1-DDL.sql          # Creates database and Bronze schema
-├── 2-Validation.sql   # Data quality, NULL checks, and type validation queries
-├── 3-Silver_Layer.sql # Transformation, data cleaning, and type casting scripts
-├── 4-Gold_Layer.sql   # Star schema creation, dimensions, facts, and indexing
-└── README.md          # Comprehensive project documentation
+├── Data/                              # Raw Airbnb datasets (CSV files for 10 European cities)
+│   ├── amsterdam_weekdays.csv
+│   ├── amsterdam_weekends.csv
+│   ├── ... (and other city CSV files)
+├── SQL Files/                         # SQL scripts for data pipeline stages
+│   ├── 1-DDL.sql                      # Database initialization and Bronze schema definition
+│   ├── 2-Vaildation.sql               # Data quality, NULL checks, and type validation queries
+│   ├── 3-Silver_Layer.sql             # Transformation, data cleaning, and type casting scripts
+│   └── 4-Gold_Layer.sql               # Star schema creation, dimensions, facts, and indexing
+├── Airbnb Prices Dashboard.pbix       # Power BI interactive report file
+├── Data Understanding.txt             # Initial data dictionary and dataset description
+└── README.md                          # Comprehensive project documentation
 ```
-
----
 
 ## How to Execute
 
